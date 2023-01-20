@@ -1,4 +1,5 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +11,10 @@ public class TelexTest {
     public WebDriver driver;
 
     @Test
+    @Epic("Telex")
+    @Story("Telex Landing Page")
+    @Description("Navigation to Landing Page")
+    @Severity(SeverityLevel.CRITICAL)
     public void testNavigation() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
